@@ -1,0 +1,440 @@
+<html>
+<head>
+	<title> resume </title>
+	<style type="text/css">
+		*{
+			padding:0px;
+			margin:0px;
+		}
+		body{
+			/*display:flex;*/
+			background-image:url(images/page-bg.jpg);
+		}
+		h1{
+			color:#6a6969;
+			font-size:50px;
+		}
+		h2{
+			color:#6a6969;
+			font-size:20px;
+		}
+		p{
+			color:#6a6969;
+			margin-top:10px;
+			margin-bottom:10px;
+		}
+		a {
+			text-decoration:none;
+			color:#6a6969;
+		}
+		a:hover {
+			color:lightblue;
+		}
+		#big_wrapper{
+			/*display:flex;
+			align-items:center;
+			margin-left:200px;*/
+			margin:0px auto 300px auto; /* auto means brouser calculates margin itself */
+			width:70%;
+			overflow:auto;
+			background-image:url("images/body-bg.png");
+			padding-bottom:100px;
+		}
+		nav{
+			display:flex;
+			width:70%;
+			height:100px;
+			position:fixed;
+			background-color:#222222;
+		}
+		#logo{
+			margin-left:10px;
+			margin-top:20px;
+		}
+		nav li{
+			flex-shrink:1;
+			margin-right:20px;
+			/*display : inline;*/
+		}
+		nav ul{
+			display:flex;
+			width:70%;
+			font-size:20px;
+			margin-left:40%;
+			margin-top:10px;
+			list-style: none;
+			color:#6a6969;
+		}
+		#ulwrapper{
+			flex-grow:1;
+		}
+
+		.image{
+			width:160px;
+			height:250px;
+			border-radius:25px;
+			margin-top:50px;
+			background-image:url("images/crop.jpg");
+			background-size:cover;
+			border:2px solid black;
+		}
+		/*.about{
+			margin-top:170px;
+			margin-left:50px;
+		}*/
+		#about{
+			margin:50px 50px;
+			padding-top:120px;
+		}
+		#experience{
+			margin:50px 50px;
+			padding-top:120px;
+		}
+		#work{
+			margin:50px 50px;
+			padding-top:120px;
+		}
+		#connect{
+			margin:50px 50px;
+			padding-top:120px;
+		}
+		section li{
+			display:inline-block;
+			list-style: none;
+		}
+		
+		.facebook{
+			margin-left:700px;
+			margin-top:-20px;
+			width:30px;
+			height:30px;
+			background-image:url("images/sm-facebook-icon.png");
+			background-repeat:no-repeat;
+		}
+		.twitter{
+			background:url(images/sm-twitter-icon.png) no-repeat; 
+			width:30px;
+			height:30px;
+			margin-left:740px;
+			margin-top:-30px;
+		}
+		.linkedin{
+			background:url(images/sm-linkedin-icon.png) no-repeat;
+			width:30px;
+			height:30px;
+			margin-left:785px;
+			margin-top:-30px;
+		}
+		.topdivider{
+			margin-top:25px;
+			width:91%;
+			height:9px;
+			background:url("images/divider.png") repeat-x;
+		}
+		.bottomdivider{
+			margin-top:35px;
+			width:91%;
+			height:9px;
+			background:url("images/divider.png") repeat-x;
+		}
+		.box{
+			display:flex;
+		}
+		.content{
+			margin-top:70px;
+			margin-left:50px;
+			width:70%;	
+		}
+		#icons li{
+			margin:5px;
+			padding:5px;
+		}
+		.row{
+			display:flex;
+			margin-top:40px;
+			flex-direction:row;
+		}
+		.col{
+			margin-right:50px;
+			width:30%;
+		}
+		.flex-container{
+			width:100%;
+			display: flex;
+			flex-direction:row;
+			flex-wrap:wrap;
+		}
+		.flex-item{
+			width:250px;
+			height:auto;
+			flex: 1 0 0;
+			margin-right:25px;
+			margin-top:25px;
+		}
+		#workImg{
+			width: 230px;
+			height:230px;
+		}
+		/*------------------------------------------------------------------------------------*/
+		.social{
+			margin-top:60px;
+			display:flex;
+			flex-direction:row;
+			flex-wrap:wrap;
+		}
+		.form{
+			/*width:80%;
+			flex: 1 0 0;*/
+		}
+		#follow{
+			margin-left:100px;
+		}
+		#name{
+			/*margin-right:40px;*/
+			width:100px;
+			/*padding-bottom:50px;*/
+			color:#6a6968;
+			font-size: 20px;
+		}
+		#email{
+			margin-top:40px;
+			width:100px;
+			/*padding-bottom:50px;*/
+			color:#6a6968;
+			font-size: 20px;
+		}
+		#message{
+			margin-top:5px;
+			width:100px;
+			color:#6a6968;
+			font-size: 20px;
+		}
+		.name{
+			margin-left:100px;
+			margin-top:-30px;
+			width:255px;
+			padding:10px;
+			border:1px solid black;
+			margin-bottom:-5px;
+			color:lightblue;
+			background:#222222 url("images/icon-user.png") no-repeat 10px 8px;
+		}
+		.email{
+			margin-top:-30px;
+			margin-left:100px;
+			width:255px;
+			padding:10px;
+			border:1px solid black;
+			margin-bottom:20px;
+			color:lightblue;
+			background:#222222 url(images/icon-mail.png) no-repeat 10px 9px;
+		}
+		.message{
+			margin-left:100px;
+			margin-top:-20px;
+			border:1px solid black;
+			width:255px;
+			height:100px;
+			padding:10px 10px 10px 30px;
+			color:lightblue;
+			background:#222222 url(images/icon-message.png) no-repeat 10px 8px;
+		}
+		.submit{
+			margin-top:10px;
+			margin-left:250px;
+			border:1px solid black;
+			padding:5px;
+			background-color:#222222;
+			color:#6a6968;
+		}
+		#links li{
+			margin-right:15px;
+			margin-top:30px;
+		}
+		#twitter{background:url("images/sm-twitter-icon.png") no-repeat; width:30px; height:30px;}
+		#dribble{background:url(images/sm-dribble-icon.png) no-repeat;width:30px; height:30px;}
+		#vimeo{background:url(images/sm-vimeo-icon.png) no-repeat; width:30px; height:30px;}
+		#google{background:url(images/sm-google-icon.png) no-repeat;width:30px; height:30px;}
+		#youtube{background:url(images/sm-youtube-icon.png) no-repeat; width:30px; height:30px;}
+		#linkedin{background:url(images/sm-linkedin-icon.png) no-repeat;width:30px; height:30px;}
+
+	/*--------------------------------------------------*/
+
+	#firstemptydiv{
+			padding: .1px;
+	}
+	
+	@media screen and (max-width:1100px) and (min-width:700px){
+			#ulwrapper{
+				display: none;
+			}
+	}
+	@media screen and (max-width:700px) and (min-width:100px){
+		.box , .flex-container , .row{
+				flex-direction:column;
+		}
+		nav ul{
+				flex-direction:column;
+			}
+			nav{
+				flex-direction:column;
+				height: 200px;
+			}
+		section{
+			margin-top:150px;
+		}
+	}
+	
+</style>
+</head>
+<body>
+	<div id="firstemptydiv"></div>
+	<div id="big_wrapper">
+	<nav id="nav">
+		<div id="logo"><a href="#"><img src="images/logo.png"></a></div>
+		<div id="ulwrapper">{
+		<ul id="right">
+			<li><a href="#about">About</a></li>
+			<li><a href="#experience">Experience</a></li>
+			<li><a href="#work">Work</a></li>
+			<li><a href="#connect">Connect</a></li>
+		</ul>
+		</div>
+	</nav>
+	<section id="section">
+		<div id="about">
+			<h1><a name="about">About</a></h1>
+			<ul class="top-social">
+				<li><div class="facebook"></div></li>
+				<li><div class="twitter"></div></li>
+				<li><div class="linkedin"></div></li>
+			</ul>
+			<div class="topdivider"></div>
+			<div class="box">  <!-- this box is 1st flex box container in my code and its children flex items -->
+			 <div class="image"></div>
+			 <div class="content">
+				<h2>My Name is Akshit Singh, I am a Web Designer</h2>
+				<p>Experience in designing, and competetive coding.
+					Excellent logical, analytical and computational skills.
+					Strong motivational and leadership skills.
+					Ability to work under pressure.
+					Ability to work individual as well as in team.
+					Languages: JAVA, C, C++, Python, PHP
+					Operating System: Windows 7,8,10, LINUX, UNIX.
+				</p>
+				<ul id="icons">
+					<li class="design"><img src="images/icon-1.png"></img></li>
+					<li class="mobile"><img src="images/icon-2.png"></img></li>
+					<li class="film"><img src="images/icon-3.png"></img></li>
+					<li class="photo"><img src="images/icon-4.png"></img></li>
+				</ul>
+			 </div>
+			</div>
+			<div class="bottomdivider"></div>
+		</div>
+		
+		<div id="experience">
+			<h1><a name="experience"></a>Experience</h1>
+			<div class="topdivider"></div>
+			<div class="row">	<!-- this box is 2nd flex box container in my code and its children flex items -->
+			 <div class="col">
+				<h2>Description of Work</h2>
+				<p>One of the most difficult parts in writing a resume is composing
+							the descriptions of your jobs, volunteer work, projects, and other
+							relevant experiences. Each description should be clear and
+							concise,yet descriptive. After reading your description, a
+							prospective employer should know exactly what your responsibilities
+							 were, what skills you have developed, where your strengths lie,
+							  and what you have achieved </p>
+             </div>
+             <div class="col">
+				<h2>Description of Work</h2>
+				<p>One of the most difficult parts in writing a resume is composing
+							the descriptions of your jobs, volunteer work, projects, and other
+							relevant experiences. Each description should be clear and
+							concise,yet descriptive. After reading your description, a
+							prospective employer should know exactly what your responsibilities
+							 were, what skills you have developed, where your strengths lie,
+							  and what you have achieved</p>
+			 </div>
+             <div class="col">
+				<h2>Description of Work</h2>
+				<p>One of the most difficult parts in writing a resume is composing
+							the descriptions of your jobs, volunteer work, projects, and other
+							relevant experiences. Each description should be clear and
+							concise,yet descriptive. After reading your description, a
+							prospective employer should know exactly what your responsibilities
+							 were, what skills you have developed, where your strengths lie,
+							  and what you have achieved.</p>
+			 </div>
+			</div>
+			<div class="bottomdivider"></div>
+		</div>
+		
+		<div id="work">
+			<h1><a name="work" ></a>Work</h1>
+			<div class="topdivider"></div>
+			<div class="flex-container"><!-- this box is 3rd flex box container in my code and its children flex items -->
+					<div class="flex-item"><img  id=workImg
+						src="images/work/work-full1.jpg"/></div>
+					<div class="flex-item"><img  id=workImg
+						src="images/work/work-full2.jpg"/></div>
+					<div class="flex-item"><img  id=workImg
+						src="images/work/work-full3.jpg"/></div>
+					<div class="flex-item"><img  id=workImg
+						src="images/work/work-full4.jpg"/></div>
+					<div class="flex-item"><img  id=workImg
+						src="images/work/work-full5.jpg"/></div>
+					<div class="flex-item"><img  id=workImg
+						src="images/work/work-full6.jpg"/></div>
+					<div class="flex-item"><img  id=workImg
+						src="images/work/work-full7.jpg"/></div>
+					<div class="flex-item"><img  id=workImg
+						src="images/work/work-full8.jpg"/></div>
+					<div class="flex-item"><img  id=workImg
+						src="images/work/work-full9.jpg"/></div>
+					<div class="flex-item"><img  id=workImg
+						src="images/work/work-full10.jpg"/></div>
+					<div class="flex-item"><img  id=workImg
+						src="images/work/work-full11.jpg"/></div>
+					<div class="flex-item"><img  id=workImg
+						src="images/work/work-full12.jpg"/></div>
+			</div>
+			<div class="bottomdivider"></div>
+		</div>
+		
+		<div id="connect">
+			<h1><a name="connect">Connect</a></h1>
+			<div class="topdivider"></div>
+        	<div class="social"> <!-- flex box 4 -->
+            	<div class="form">
+                	<form action="#" method="get">
+                    	<div id="name">Name</div>
+                        <input type="text" name="name" class="name" /><br>
+                        <div id="email">Email</div>
+                        <input type="email" name="email"  class="email"/><br>
+                        <div id="message">Message</div>
+                        <textarea  class="message"></textarea><br>
+                        <input type="submit" name="submit" value="Submit" class="submit">
+                    </form>
+                </div>
+
+                <div class="form" id="follow">
+                	<h2>Follow Me:</h2>
+                    <p>connect to me using facebook ,whatapp etc</p>
+					<ul id="links">
+                    	<li><div id="google"></div></li>
+           				<li><div id="dribble"></div></li>
+           				<li><div id="vimeo"></div></li>
+           				<li><div id="youtube"></div></li>
+           				<li><div id="twitter"></div></li>
+           				<li><div id="linkedin"></div></li>
+                    </ul>
+                </div>
+            </div>
+		</div>
+	
+	</section>
+	</div>
+</body>
+</html>
