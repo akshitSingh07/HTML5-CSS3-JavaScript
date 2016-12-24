@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List Css</title>
+<style>
+	body{
+		background: white;
+		//background: radial-gradient(circle, #fff 20%, #ccc);
+		//background: radial-gradient(circle, #fff 20%, #99f);
+		background: radial-gradient(circle, #ffc 20%, #ce5);
+		//background-color: #FFCCE5 99FFCC 
+	}
+	#clear:hover{
+			color:white;
+			border:2px solid #FF007F;
+			background-color: #FF007F;
+	}
+	#addtodo:hover{
+			color:white;
+			border:2px solid #00CC00;
+			background-color: #00CC00;
+	}
+	#container{
+		margin-left: 35%;
+		margin-top:5%;
+		width:320px;
+		//height:400px ;
+		background-color: #000066;
+		padding:10px;
+		border-radius:5px;
+		border:1px solid black;
+		box-shadow : 0px 7px 7px #000066;
+		//display:flex;
+	}
+	#input{
+			margin:5px;
+			width:97%;
+			height :36px;
+			background-color: #006666;
+			box-shadow: 0px -2px 1px black;
+			border : 1px solid grey;
+			border-radius:4px;
+			color : white;
+			padding:10px;
+			box-sizing:border-box;
+			display:inline-block;
+			font-size: 20px;
+	}	
+	#addtodo{
+			margin-left:9px;
+			margin-top:8px;
+			margin-right:5px;
+			margin-bottom:10px;
+			padding:10px;
+			color:black;
+			font-weight:bold;
+			//text-align:center;
+			width: 45%;
+			height: 36px;
+			display:inline-block;
+			background-color: #99FF33;
+			border-radius:4px;
+			box-shadow : 0px 5px 3px black;
+			//box-sizing:border-box;
+			border:2px solid #99FF33;
+	}
+	#clear{
+			margin:5px;
+			margin-bottom:10px;
+			padding:10px;
+			color:black;
+			font-weight:bold;
+			width: 45%;
+			height: 36px;
+			display:inline-block;
+			background-color: #FF66B2;
+			border-radius:4px;
+			box-shadow : 0px 5px 3px black;
+			//box-sizing:border-box;
+			border:2px solid #FF66B2;
+	}
+	li{
+		margin-left:-30px;
+		width : 100%;
+		border-radius: 3px;
+		background-color:#eee;
+		list-style: none;
+		padding: 5px 10px;
+		margin-bottom: 5px;
+	}
+	/*
+    background: #eee;
+    position: relative;
+  }*/
+  li:nth-child(2n){
+    background: #ccc;
+  }
+</style>
+</head>
+
+<body>
+
+<audio src="Click.mp3" id="audio"></audio>
+<div id = "container">
+	<input id="input" type="text">
+	<button id="addtodo" onclick="addTodo()">Add ITEM</button>
+	<button id="clear" onclick="removeTodo()">Clear ITEM</button>
+	<ul id="mytodos">
+	</ul>
+</div>	
+
+<script src="TodoList.js"></script>
+
+</body>
+</html>
