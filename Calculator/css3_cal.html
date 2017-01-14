@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Calculator </title>
+	<style>
+		body{
+			background: white;
+			background: radial-gradient(circle, #fff 20%, #ccc);
+			//background-color: #FFFFCC;
+		}
+		 .item:hover {
+			color:white;
+			border:2px solid #FF6666;
+			background-color: #FF6666;
+		}
+		#b:hover{
+			color:white;
+			border:2px solid #009900;
+			background-color: #009900;
+		}
+		#c:hover{
+			border:2px solid #FF007F;
+			background-color: #FF007F;
+		}
+		.operator:hover{
+			color:black;
+			border:2px solid #FFCC99;
+			background-color: #FFCC99;
+		}
+		.container{
+			margin-left: 35%;
+			margin-top:5%;
+			width:320px;
+			height:auto;
+			background-color: #00CCCC;
+			padding:10px;
+			border-radius:5px;
+			//border:1px solid black;
+			box-shadow : 5px 5px 5px #006666;
+			//display:flex;
+		}
+
+		input{
+			margin:5px;
+			width:220px;
+			height : 36px;
+			background-color: #006666;
+			box-shadow: 0px -2px 1px black;
+			border : 1px solid grey;
+			border-radius:4px;
+			color : white;
+			padding:10px;
+			box-sizing:border-box;
+			display:inline-block;
+			font-size: 20px;
+		}
+
+		#c{
+			margin:5px;
+			margin-bottom:10px;
+			padding:10px;
+			color:white;
+			font-weight:bold;
+			text-align:center;
+			width: 66px;
+			height: 36px;
+			display:inline-block;
+			background-color: pink;
+			border-radius:4px;
+			box-shadow : 0px 5px 3px black;
+			box-sizing:border-box;
+			border:2px solid pink;
+		}
+
+		.item {
+			padding:10px;
+			color: #FF007F;
+			font-weight:bolder;
+			text-align:center;
+			display:inline-block;
+			width: 66px;
+			height: 36px;
+			background-color: white;
+			margin:5px;
+			border-radius:4px;
+			border:2px solid white;
+			box-shadow : 0px 5px 3px black;
+			box-sizing:border-box;
+		}
+		.operator{
+			padding:8px;
+			color:#FF007F;
+			font-weight:bolder;
+			font-size:15px;
+			text-align:center;
+			display:inline-block;
+			width: 66px;
+			height: 36px;
+			background-color: lightyellow;
+			margin:5px;
+			border-radius:4px;
+			box-shadow : 0px 5px 3px black;
+			box-sizing:border-box;
+			border:2px solid lightyellow;
+		}
+		#b{
+			color:black;
+			border:2px solid #B2FF66;
+			background-color:#B2FF66;
+		}
+	</style>
+</head>
+<body>
+	<audio src="Click.mp3" id="audio"></audio>
+	<div class="container">
+		<button id="c" value=""> C </button>
+		<input type="text" id="input" name="input" value="" >
+
+		<br>
+		<button class="item" id="b7" value="7">7</button>
+		<button class="item" id="b8" value="8">8</button>
+		<button class="item" id="b9" value="9">9</button>
+		<button class="operator" id="b+" value="+" onclick="setOperator()" >+</button>
+
+		<button class="item" id="b4" value="4">4</button>
+		<button class="item" id="b5" value="5">5</button>
+		<button class="item" id="b6" value="6">6</button>
+		<button class="operator" id="b-" value="-">--</button>
+
+		<button class="item" id="b1" value="1">1</button>
+		<button class="item" id="b2" value="2">2</button>
+		<button class="item" id="b3" value="3">3</button>
+		<button class="operator" id="b*" value="x">X</button>
+
+		<button class="item" id="b0" value="0">0</button>
+		<button class="item" id="b." value=".">.</button>
+		<button class="item" id="b" onClick="calculate()" >=</button>
+		<button class="operator" id="b/" value="/">/</button>
+
+	</div>
+
+	<script src="calculator.js"></script>
+</body>
+</html>
